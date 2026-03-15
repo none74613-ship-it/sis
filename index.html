@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Gift Box Start Screen -->
+    <div id="giftScreen">
+        <div id="giftBox">🎁</div>
+        <h2>Click the gift to open your birthday surprise!</h2>
+    </div>
+
+    <!-- Main Animation Container -->
+    <div class="container" id="mainContainer" style="display:none;">
+        <h1 class="title">🎉 Happy Birthday, My Little Queen! 🎉</h1>
+        <div id="wishesContainer"></div>
+    </div>
+
+    <!-- Canvas for Effects -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Sounds -->
+    <audio id="popSound" src="pop.mp3"></audio>
+    <audio id="blastSound" src="blast.mp3"></audio>
+    <audio id="bgMusic" src="birthday_music.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

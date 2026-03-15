@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body & Canvas */
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff7eb9, #ff758c, #fffcf5, #9ee7ff);
+    background-size: 400% 400%;
+    animation: bgShift 20s infinite alternate;
+    position: relative;
+}
+
+@keyframes bgShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Gift Box Screen */
+#giftScreen {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+}
+
+#giftBox {
+    font-size:5rem;
+    cursor:pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 10px #000;
+}
+
+#wishesContainer {
+    margin-top: 40px;
+    min-height: 60px;
+}
+
+.wish {
+    font-size: 1.6rem;
+    margin: 15px 0;
+    color: black; /* Ensuring all wishes remain black */
+    text-shadow: 1px 1px 5px #fff;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {opacity:1;}
+}
